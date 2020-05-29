@@ -1,0 +1,121 @@
+*,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  /* height: 100vh; */
+  padding: 40px;
+  color: white;
+  overflow: hidden;
+}
+.menu-slide-left-enter-active,
+.menu-slide-left-leave-active {
+  transition: all 0.4s ease-out;
+}
+.menu-slide-left-enter {
+  transform: translateX(-100%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.menu-slide-left-leave-to {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transform: translateX(100%);
+}
+
+.menu-slide-right-enter-active,
+.menu-slide-right-leave-active {
+  transition: all 0.5s;
+}
+.menu-slide-right-enter {
+  transform: translateX(100%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.menu-slide-right-leave-to {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transform: translateX(-100%);
+}
+.dropdown {
+  background: #34495e;
+  width: 400px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 0 10px lightblue;
+  /* padding: 4px; */
+  transition: height 0.4s ease-out;
+}
+.menu {
+  width: 100%;
+  background: #34495e;
+}
+.menu-item {
+  padding: 10px;
+  margin: 4px;
+  background: rgba(44, 62, 80, 1);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.4s;
+  display: flex;
+  align-items: center;
+}
+.menu-item:hover {
+  background: rgba(44, 62, 80, 0.4);
+}
+
+.menu-content {
+  padding: 10px;
+  margin: 4px;
+  /* background: ; */
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.menu-icon {
+  font-size: 40px;
+  fill: white;
+  display: flex;
+  margin: 0 !important;
+  padding-right: 10px;
+}
+
+.trace-icon {
+  /* fill: lightslategrey; */
+  background: #34495e;
+  display: flex;
+  padding-right: 0;
+  border-radius: 8px;
+  padding: 4px;
+  cursor: pointer;
+  transition: background 0.4s;
+}
+.trace-icon:hover {
+  background: rgba(44, 62, 80, 0.8);
+}
+
+.trace-item {
+  display: flex;
+  position: relative;
+  z-index: 1;
+}
+
+.menu-used {
+  position: absolute;
+  z-index: -1;
+  top: 100%;
+}
