@@ -1,6 +1,6 @@
 # menu-transition
 
-[link](https://imgur.com/fyJ8KnO)
+!(image)[https://i.imgur.com/fyJ8KnO.mp4]
 
 ## Project setup
 
