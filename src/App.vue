@@ -1,7 +1,7 @@
 <template>
   <div class="main">
     <div class="trace-item">
-      <div @click="openMenu" class="navigation-item">
+      <div @click="toggleMenu" class="navigation-item">
         <MenuI class="menu-icon trace-icon" />
       </div>
 
@@ -21,11 +21,17 @@
               <span>Logout</span>
             </div>
           </div>
-          <div class="menu-content" @click="changeMenu('prime')" slot="intui">
-            <BackI class="menu-icon" />
-          </div>
-          <div class="menu-content" @click="changeMenu('prime')" slot="second">second content</div>
-          <div class="menu-content" @click="changeMenu('prime')" slot="alter">alter content</div>
+          <template #intui>
+            <div class="menu-content" @click="changeMenu('prime')">
+              <BackI class="menu-icon" />
+            </div>
+          </template>
+          <template #second>
+            <div class="menu-content" @click="changeMenu('prime')">second content</div>
+          </template>
+          <template #alter>
+            <div class="menu-content" @click="changeMenu('prime')">alter content</div>
+          </template>
         </Menu>
       </div>
     </div>
@@ -65,6 +71,10 @@ export default {
     },
     closeMenu() {
       this.isOpen = false;
+    },
+    toggleMenu() {
+      this.isOpen = !this.isOpen;
+      this.activeMenu = "prime";
     }
   }
 };
